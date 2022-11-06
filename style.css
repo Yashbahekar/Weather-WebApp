@@ -1,0 +1,416 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0px;
+  background: url("https://source.unsplash.com/1600x900/?landscape")
+    rgb(34, 34, 34);
+  font-family: "Secular One", sans-serif;
+  /* font-size: 100%; */
+}
+
+.container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  margin: 4.5px;
+  margin: 10px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: stretch;
+  
+}
+
+.clock {
+  color: aliceblue;
+  padding: 10px;
+  /* background-color: rgb(24, 26, 25); */
+  height: 110px;
+  width: 250px;
+  font-size: 27px;
+  font-style: bold;
+
+  border: 2px solid aliceblue;
+  /* border-radius: 10px; */
+  box-shadow: 0 15px 25px rgba(164, 162, 162, 0.2);
+  backdrop-filter: blur(1px);
+  background-color: rgba(149, 139, 139, 0.46);
+}
+
+.clock.date {
+  font-size: 30px;
+}
+
+.card {
+  position: fixed;
+  top: 35px;
+
+  color: whitesmoke;
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 1em;
+
+  border: 3px solid #2e94e3;
+  box-shadow: 0 15px 25px rgba(164, 162, 162, 0.2);
+  backdrop-filter: blur(11px);
+  background-color: rgba(10, 9, 9, 0.46);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+
+  border: 3px solid #2e94e3;
+  background: #999595;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #353333;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: rgb(73, 70, 70);
+  color: whitesmoke;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
+
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.3em;
+}
+
+.description {
+  text-transform: capitalize;
+  margin-left: 8px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  
+  
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading::after {
+  visibility: visible;
+  content: "Loading.......";
+  color: aliceblue;
+  position: absolute;
+  top: 0;
+  left: 24px;
+}
+
+/* Other days forecast... */
+.weather.container {
+  color: aliceblue;
+  width: 1450px;
+  max-width: 1245px;
+  align-items: center;
+ 
+
+  /* border: 3px solid #2e94e3; */
+  border-radius: 1.5em;
+  position: fixed;
+  top: 400px;
+  left: 110px;
+  right: 45px;
+}
+
+.image {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+/* .imgClass{
+  align-items: center;
+} */
+
+/* day1... */
+div#day2 {
+  border: #4a6781;
+  border-radius: 1em;
+  position: fixed;
+  left: 155px;
+  border: 3px solid #2e94e3;
+  /* background-color: rgb(61, 60, 60); */
+  background-color: rgba(10, 9, 9, 0.46);
+
+  
+  top: 444px;
+  height: 250px;
+  width: 280px;
+}
+p#Day2 {
+  text-align: center;
+  font-size: 24px;
+  color: whitesmoke;
+}
+
+img#img2 {
+  position: fixed;
+  left: 240px;
+  bottom: 155px;
+  height: 110px;
+  top: 480px;
+}
+
+p#day2Des {
+  font-weight: bold;
+  text-align: center;
+  position: fixed;
+  /* margin: 1em; */
+  top: 555px;
+  left: 275px;
+}
+p#day2Hum {
+  position: fixed;
+  top: 600px;
+  left: 177px;
+}
+p#day2day {
+  position: fixed;
+  top: 625px;
+  left: 177px;
+}
+p#day2night {
+  position: fixed;
+  top: 625px;
+  left: 300px;
+}
+
+/* day2... */
+div#day3 {
+  border: #4a6781;
+  border-radius: 1em;
+  position: fixed;
+  left: 455px;
+  border: 3px solid #2e94e3;
+  /* background-color: rgb(61, 60, 60); */
+  background-color: rgba(10, 9, 9, 0.46);
+
+  
+  top: 444px;
+  height: 250px;
+  width: 280px;
+}
+
+p#Day3 {
+  text-align: center;
+  font-size: 24px;
+  color: whitesmoke;
+}
+img#img3 {
+  position: fixed;
+  left: 540px;
+  bottom: 155px;
+  height: 110px;
+  top: 480px;
+}
+p#day3Des {
+  font-weight: bold;
+  text-align: center;
+  position: fixed;
+  top: 555px;
+  left: 575px;
+}
+p#day3Hum {
+  position: fixed;
+  top: 600px;
+  left: 477px;
+}
+p#day3day {
+  position: fixed;
+  top: 625px;
+  left: 477px;
+}
+p#day3night {
+  position: fixed;
+  top: 625px;
+  left: 610px;
+}
+
+/* Day3... */
+div#day4 {
+  border: #4a6781;
+  border-radius: 1em;
+  position: fixed;
+  left: 755px;
+  border: 3px solid #2e94e3;
+  /* background-color: rgb(61, 60, 60); */
+  background-color: rgba(10, 9, 9, 0.46);
+
+  
+  top: 444px;
+  height: 250px;
+  width: 280px;
+}
+
+p#Day4 {
+  text-align: center;
+  font-size: 24px;
+  color: whitesmoke;
+}
+img#img4 {
+  position: fixed;
+  left: 840px;
+  bottom: 155px;
+  height: 110px;
+  top: 480px;
+}
+p#day4Des {
+  font-weight: bold;
+  text-align: center;
+  position: fixed;
+  top: 555px;
+  left: 875px;
+}
+p#day4Hum {
+  position: fixed;
+  top: 600px;
+  left: 777px;
+}
+p#day4day {
+  position: fixed;
+  top: 625px;
+  left: 777px;
+}
+p#day4night {
+  position: fixed;
+  top: 625px;
+  left: 900px;
+}
+
+/* day 4... */
+div#day5 {
+  border: #4a6781;
+  border-radius: 1em;
+  position: fixed;
+  left: 1055px;
+  border: 3px solid #2e94e3;
+  background-color: rgba(10, 9, 9, 0.46);
+  
+  top: 444px;
+  height: 250px;
+  width: 280px;
+}
+
+p#Day5 {
+  text-align: center;
+  font-size: 24px;
+  color: whitesmoke;
+}
+img#img5 {
+  position: fixed;
+  left: 1140px;
+  bottom: 155px;
+  height: 110px;
+  top: 480px;
+}
+p#day5Des {
+  font-weight: bold;
+  text-align: center;
+  position: fixed;
+  top: 555px;
+  left: 1175px;
+}
+p#day5Hum {
+  position: fixed;
+  top: 600px;
+  left: 1077px;
+}
+p#day5day {
+  position: fixed;
+  top: 625px;
+  left: 1077px;
+}
+p#day5night {
+  position: fixed;
+  top: 625px;
+  left: 1200px;
+}
+
+/* clock */
+
+.datetime {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  margin: 3px;
+
+  color: #fff;
+  background: #10101e;
+  font-family: "Segoe UI", sans-serif;
+  width: 310px;
+  padding: 15px 10px;
+  border: 3px solid #2e94e3;
+  border-radius: 5px;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+  transition: 0.5s;
+  transition-property: background, box-shadow;
+  box-shadow: 0 15px 25px rgba(164, 162, 162, 0.2);
+  backdrop-filter: blur(7px);
+  background-color: rgba(10, 9, 9, 0.46);
+}
+
+.date {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.time {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time span:not(:last-child) {
+  position: relative;
+  margin: 0 6px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.time span:last-child {
+  background: #2e94e3;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding: 0 5px;
+  border-radius: 3px;
+}
